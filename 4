@@ -1,0 +1,56 @@
+//algoritmo: ponto em area circular
+//funcao:
+//autor: Álvaro Henrique
+//data: 31/09/2017
+
+programa
+{
+	// bibliotecas
+	inclua biblioteca Matematica --> mat
+	
+	//funcao principal
+	funcao inicio()
+	{
+    	
+    	// declaração de variaveis
+    	real xcentro, ycentro // coordenadas da varaivel do centro do circulo
+    	real raio // tamanho do raio do circulo
+    	real xponto, yponto // coordenadas do ponto a ser verificado
+    	real diametro // tamanho do diametro do circulo
+    	real distancia // distancia entre o ponto fornecido e o centro do circulo
+    	
+    	// apresentação
+    	escreva("Ponto em area circular!!\n")
+    	
+    	// solicitar coordenadas dos pontos
+    	escreva("Entre com a coordenada do centro em x:")
+    	leia(xcentro)
+   	
+    	escreva("Entre com a coordenada do centro em y:")
+    	leia(ycentro)
+    	
+    	escreva("Entre com o diametro do circulo:")
+    	leia(diametro)
+  	
+    	// solicitar ponto verificado
+    	escreva("Entre com a coordenada do ponto a ser verificado em x:")
+    	leia(xponto)
+    	
+    	escreva("Entre com a coordenada do ponto a ser verificado em y: ")
+    	leia(yponto)
+	
+    	//operaçoes matematicas
+    	raio = diametro/2
+    	distancia = mat.raiz((mat.potencia(ycentro - yponto,2.0)) + (mat.potencia(xcentro - xponto,2.0)) ,2.0) // distancia entre o ponto e o centro do circulo
+	
+    	//verificar posicao
+    	se(distancia < raio) // o ponto está dentro do circulo
+    	escreva("O ponto se encontra dentro do circulo!")
+	
+    	senao se(distancia > raio) // o ponto está fora do circulo
+    	escreva("O ponto se encontra fora do circulo!")
+    	
+    	senao escreva("O ponto se encontra na borda do circulo!")
+	
+    	}
+}
