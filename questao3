@@ -1,0 +1,47 @@
+// Algoritimo: Caixa Eletrônico
+// Função: Informa a quantidade mínima de cedulas para um determinado valor
+// Autor: Pedro Gondim
+// Data: 26/08/2017
+programa
+{
+	funcao inicio()
+	{
+		// Declaração de Variávies
+		inteiro quantiaDinheiro // Dinheiro fornecido ao caixa
+		inteiro qt100, qt50, qt20, qt10, qt5, qt2 //Quantidade de cada cédula
+		inteiro saida100, saida50, saida20, saida10, saida5 //Valor que resta após avaliação
+
+
+		//Apresentação do Programa
+		escreva("-- CAIXA ELETRÔNICO --\n")
+
+		//Solicitando quantia de entrada
+		escreva("Informe a quantidade de dinheiro: ")
+		leia(quantiaDinheiro)
+
+		//Caculando...
+		qt100 = quantiaDinheiro/100
+		saida100 = quantiaDinheiro%100
+
+		qt50 = saida100/50
+		saida50 = saida100%50 
+
+		qt20 = saida50/20
+		saida20 = saida50%20
+
+		qt10 = saida20/10
+		saida10 = saida20%10
+
+		qt5 = saida10/5
+		saida5 = saida10%5
+
+		qt2 = saida5/2
+		
+
+		//Apresentando resultado
+		escreva("A quantidade mínima é a de ", qt100," cédula de R$100, ", qt50, " de R$50 ,", qt20, " de R$20 ,", qt10, " de R$10 ,", qt5, " de R$5 e ",qt2," de R$2")
+
+		 	
+		 }
+	}
+
